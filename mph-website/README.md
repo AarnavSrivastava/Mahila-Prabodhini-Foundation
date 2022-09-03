@@ -1,7 +1,3 @@
-# Mahila Prabodhini Foundation
-
-Website focuses on providing a platform for the Gram Bazaar
-
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
