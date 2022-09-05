@@ -1,10 +1,8 @@
-import React from 'react';
-
 const TxtDisp = () =>
 {
     return (
         <div>
-            <div className="font-lato text-[1.6vw] px-[11%] pb-[2%] leading-[2.5vw]">
+            <div className="font-lato lg:text-[1.6vw] text-[16px] px-[11%] pb-[2%] lg:leading-[2.5vw] leading-1">
                 We focus on the most potent and significant parts of society i.e., Women. They possess by birth
                 managerial risk-bearing capability and of course patience. We graduate them into thrift and
                 credit groups (women's self-help groups). Each group consists of 10-15 rural women from the
@@ -15,7 +13,7 @@ const TxtDisp = () =>
                 set up a tiny production unit but they still have to face marketing problems. We, therefore,
                 started the concept of Prabodhini Gram Bazaar (Rural Mart).
             </div>
-            <div className="font-lato text-[1.6vw] px-[11%] pb-[4%] leading-[2.5vw]">
+            <div className="font-lato lg:text-[1.6vw] text-[16px] px-[11%] pb-[4%] lg:leading-[2.5vw] leading-1">
                 It is a service-providing center, where rural entrepreneurs supply products like handmade
                 potteries, tufted decorative items, bamboo handicrafts, and bedsheets made up of the best of
                 wastes, jute folders, file covers, bags, batuas, computer bags, sling bags, etc., and also the food
