@@ -1,12 +1,13 @@
-import React from 'react';
 import {Link, useMatch, useResolvedPath} from "react-router-dom";
 import HomeLink from './navbar_components/logo_homelink.js';
 import HamburgerMenu from './navbar_components/HamburgerMenu.js';
+import React from 'react'
 
 const Navbar = () =>
 {
+
     return (
-        <nav className="flex flex-row w-screen sticky top-0 z-50 justify-between items-center bg-white-transparent px-[4%] gap-[10%]">
+        <nav className="flex wrap flex-row w-screen sticky top-0 z-50 justify-between items-center bg-white-transparent px-[4%] gap-[10%] min-h-[60px]">
             <Link to="/">
                 <HomeLink />
             </Link>
@@ -16,7 +17,7 @@ const Navbar = () =>
                 <CustomLink to="/contactus">Contact Us</CustomLink>
             </ul>
 
-            <ul className="flex-1 hidden md:flex flex-row gap-5 font-opensans font-bold text-[1vw] my-[1vw]">
+            <ul className="flex-1 hidden md:flex flex-row gap-5 font-opensans font-bold text-[1vw] my-[1vw] min-h-[40px]">
             {/* flex w-[100%] h-[2.5vw] justify-center items-center border-2 border-defpink rounded-md text-white bg-defpink hover:text-defpink hover:bg-white */}
                 <Link className="flex px-[1vw] py-[0.5vw] w-[100%] justify-center items-center transition hover:-translate-y-1 hover:scale-100 rounded-md text-white border-2 border-defpink ease-in-out delay-10 bg-defpink hover:bg-white hover:text-defpink duration-300" to="/login">
                     LOGIN
@@ -28,7 +29,7 @@ const Navbar = () =>
                     DONATE
                 </Link>
             </ul>
-            <HamburgerMenu />
+            <HamburgerMenu/>
         </nav>
     )
 }

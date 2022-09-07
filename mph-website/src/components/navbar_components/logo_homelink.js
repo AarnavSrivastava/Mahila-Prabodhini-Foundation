@@ -3,8 +3,8 @@ import Logo from '../logo.svg';
 const HomeLink = () => {
     return (
         <div className="flex group flex-row justify-start items-center gap-[0.5vw] my-[1vw]">
-            <img className="group-hover:animate-spin w-[3vw]" src={Logo} id="logo" alt="logo"/>
-            <div className="md:text-[1.7vw] text-[16px] flex-row group font-lato font-bold">
+            <img className="group-hover:animate-spin w-[3vw] min-w-[28px]" src={Logo} id="logo" alt="logo"/>
+            <div className="md:text-[1.7vw] text-[20px] flex-row group font-lato font-bold">
                 <TextSpans />
             </div>
         </div>

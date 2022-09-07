@@ -4,7 +4,7 @@ import {Link} from "react-router-dom";
 const BottomLinks = () =>
 {
     return (
-        <div>
+        <div className="hidden md:flex flex-col mt-auto">
             <div className="flex flex-row flex-wrap w-screen justify-start bg-background-blue">
                 <ul className="grid px-[11%] py-[4%] gap-[0.6vh]">
                     <div className="font-lato font-bold text-white text-[1.05vw] pb-[2%]">My Account</div>
@@ -22,8 +22,8 @@ const BottomLinks = () =>
                     <div className="pt-[2.5%] h-[0.5vh] w-[4vw] bg-defpink"></div>
                     <CustomLink to="/">Home</CustomLink>
                     <CustomLink to="/events">Events</CustomLink>
-                    <CustomLink to="/tac">Terms and Conditions</CustomLink>
-                    <CustomLink to="/priv">Privacy Policy</CustomLink>
+                    <CustomLink to="/termsandconditions">Terms and Conditions</CustomLink>
+                    <CustomLink to="/privacypolicy">Privacy Policy</CustomLink>
                 </ul>
                 
                 <ul className="grid flex-wrap px-[11%] py-[4%] gap-[0.6vh]">

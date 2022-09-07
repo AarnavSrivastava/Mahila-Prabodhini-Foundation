@@ -16,7 +16,7 @@ import Donate from './components/pages/major_pages/Donate.js';
 
 function App() {
   return (
-    <div className="flex flex-col bg-white">
+    <div className="flex flex-col bg-white min-h-screen">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>
@@ -26,8 +26,8 @@ function App() {
         <Route path="/login" element={<Login />}></Route>
         <Route path="/signup" element={<SignUp />}></Route>
         <Route path="/donate" element={<Donate />}></Route>
-        <Route path="/tac" element={<TermsAndConditions />}></Route>
-        <Route path="/priv" element={<PrivacyPolicy />}></Route>
+        <Route path="/termsandconditions" element={<TermsAndConditions />}></Route>
+        <Route path="/privacypolicy" element={<PrivacyPolicy />}></Route>
       </Routes>
       <BottomLinks />
     </div>
