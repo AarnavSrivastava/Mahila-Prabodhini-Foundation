@@ -21,7 +21,7 @@ export default function Menu()
                 <li className={props.liClass + " w-[215px]"}>
                     <button className={"flex justify-between items-center transition rounded-md w-full ease-in-out p-2 hover:bg-gray-200 duration-[150ms] "}>
                         <span>{props.content}</span>
-                        <img className="w-[2vw] " src={caret} id="caret" alt="caret"/>
+                        <img className="w-[16px] " src={caret} id="caret" alt="caret"/>
                     </button>
                 </li>
             </div>
@@ -38,7 +38,7 @@ export default function Menu()
                     <CustomLink to="/events">Events</CustomLink>
                     <CustomLink to="/login">Login</CustomLink>
                     <CustomLink to="/signup">Sign Up</CustomLink>
-                    <DropDownTransitionItem liClass="font-lato font-black text-[2vw]" goToMenu="more" content="More" />
+                    <DropDownTransitionItem liClass="font-lato font-black text-[16px]" goToMenu="more" content="More" />
                 </ul>
 
             </CSSTransition>
@@ -62,7 +62,7 @@ function CustomLink({ to, children })
 {
 
     return (
-        <li className="flex font-lato font-black text-[2vw]">
+        <li className="flex font-lato font-black text-[16px]">
             <Link to={to} className={"transition rounded-md w-full ease-in-out p-2 hover:bg-gray-200 duration-[150ms]"}>{children}</Link>
         </li>
     )
