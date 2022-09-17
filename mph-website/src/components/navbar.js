@@ -13,8 +13,9 @@ const Navbar = () =>
             </Link>
             
 
-            <ul className="hidden md:flex flex-row gap-5 font-opensans items-center xl:my-[15px] my-[1.2vw] min-h-[40px]">
+            <ul className="hidden md:flex flex-row gap-5 font-lato items-center xl:my-[15px] my-[1.2vw] min-h-[40px]">
                 <ul className="hidden md:flex justify-center flex-row gap-[1.3vw]">
+                    <CustomLink to="/">Home</CustomLink>
                     <CustomLink to="/aboutus">About</CustomLink>
                     <CustomLink to="/events">Events</CustomLink>
                     <CustomLink to="/contactus">Contact</CustomLink>
@@ -36,7 +37,7 @@ function CustomLink({ to, children })
     const resolvedPath = useResolvedPath(to)
     const isActive = useMatch({ path: resolvedPath.pathname, end: true})
     return (
-        <li className="flex font-lato font-medium text-[16px] xl:text-[20px] text-[1.6vw]">
+        <li className="flex font-medium text-[16px] xl:text-[20px] text-[1.6vw]">
             <Link to={to} className={"transition text-white ease-in-out hover:-translate-y-1 hover:scale-100 duration-[125ms] hover:text-orange-300 hover:font-medium " + (isActive ? "text-orange-200" : "") + " duration-125"}>{children}</Link>
         </li>
     )

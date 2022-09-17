@@ -23,10 +23,11 @@ module.exports = {
     },
     extend: {
         colors: {
-          'background-blue-transparent' : 'rgba(40, 68, 101, 0.9)',
-          'background-blue' : 'rgba(40, 68, 101)',
+          'background-blue-transparent' : 'rgba(17, 31, 61, 0.9)',
+          'background-blue' : 'rgba(40, 68, 120)',
           'defpink' : '#EA4C89',
           'white-transparent': 'rgba(255, 255, 255, 0.9)',
+          'cream' : '#fab998'
         },
       },
       fontFamily: {
