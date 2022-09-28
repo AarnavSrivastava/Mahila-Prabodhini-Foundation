@@ -27,7 +27,8 @@ module.exports = {
           'background-blue' : 'rgba(40, 68, 120)',
           'defpink' : '#EA4C89',
           'white-transparent': 'rgba(255, 255, 255, 0.9)',
-          'cream' : '#FFD3BA'
+          'cream' : '#FFD3BA',
+          'sand' : '#EF8E78'
         },
       },
       fontFamily: {

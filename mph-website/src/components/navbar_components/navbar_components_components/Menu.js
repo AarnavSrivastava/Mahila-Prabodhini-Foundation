@@ -36,8 +36,8 @@ export default function Menu()
                     <CustomLink to="/">Home</CustomLink>
                     <CustomLink to="/donate">Donate</CustomLink>
                     <CustomLink to="/events">Events</CustomLink>
-                    <CustomLink to="/login">Login</CustomLink>
-                    <CustomLink to="/signup">Sign Up</CustomLink>
+                    <CustomLink to="/aboutus">About Us</CustomLink>
+                    <CustomLink to="/contactus">Contact Us</CustomLink>
                     <DropDownTransitionItem liClass="font-lato font-black text-[16px]" goToMenu="more" content="More" />
                 </ul>
 
@@ -47,8 +47,6 @@ export default function Menu()
 
                 <ul>
                     <DropDownTransitionItem liClass="rotate-180" goToMenu="main" />
-                    <CustomLink to="/aboutus">About Us</CustomLink>
-                    <CustomLink to="/contactus">Contact Us</CustomLink>
                     <CustomLink to="/privacypolicy">Privacy Policy</CustomLink>
                     <CustomLink to="/termsandconditions">Terms and Conditions</CustomLink>
                 </ul>

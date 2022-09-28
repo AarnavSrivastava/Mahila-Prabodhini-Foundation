@@ -7,7 +7,7 @@ const Navbar = () =>
 {
 
     return (
-        <nav className="flex wrap flex-row w-screen sticky top-0 z-50 justify-between items-center bg-background-blue-transparent px-[6%] min-h-[60px]">
+        <nav className="flex wrap flex-row sticky top-0 z-50 justify-between items-center bg-background-blue-transparent px-[6%] min-h-[60px]">
             <Link to="/">
                 <HomeLink />
             </Link>

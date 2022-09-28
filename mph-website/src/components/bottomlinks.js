@@ -5,9 +5,9 @@ const BottomLinks = () =>
 {
     return (
         <div className="hidden md:flex flex-col mt-auto font-lato">
-            <div className="flex flex-row flex-wrap w-screen justify-between items-center bg-background-blue gap-[5%] py-[4%] px-[8%]">
+            <div className="flex flex-row flex-wrap justify-between items-center bg-background-blue gap-[5%] py-[4%] px-[8%]">
                 <ul className="basis-0 grow grid gap-[5vw]">
-                    <div className="font-bold font-roboto xl:text-[24px] text-[1.8vw] text-white">Help us change the lives of people around the world</div>
+                    <div className="font-light font-lato xl:text-[24px] text-[1.8vw] text-white">Help us change the lives of people around the world</div>
                     <div className="flex justify-start items-center">
                         <Link className="flex font-poppins xl:text-[16px] text-[1.2vw] tracking-widest font-extrabold px-[1.8vw] py-[1vw] xl:px-[24px] xl:py-[12px] justify-center items-center transition hover:-translate-y-1 hover:scale-100 text-[#831843] ease-in-out delay-[10ms] bg-white hover:text-orange-200 hover:bg-[#831843] duration-300" to="/donate">
                             DONATE NOW

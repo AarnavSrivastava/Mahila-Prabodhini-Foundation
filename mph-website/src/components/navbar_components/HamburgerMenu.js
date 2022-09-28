@@ -6,6 +6,7 @@ import Menu from './navbar_components_components/Menu.js'
 
 const HamburgerMenu = (props) => {
     const [open, setOpen] = useState(false);
+    
 
     const location = useLocation();
 
@@ -19,12 +20,13 @@ const HamburgerMenu = (props) => {
                 <img className="" src={hamburgericon} id="hamburger" alt="hamburger"/>
             </button>
 
-            <div className={(open) ? "absolute top-[55px] w-[250px] translate-x-[-45%] bg-white rounded-md p-4 overflow-hidden border-2 border-gray-400" : "hidden"}>
+            <div className={(open) ? "absolute top-[55px] w-[250px] translate-x-[-45%] bg-white rounded-md p-4 overflow-hidden border-2 border-gray-400 drop-shadow-2xl" : "hidden"}>
                 <Menu />
             </div>
 
         </div>
     )
 }
+
 
 export default HamburgerMenu;
