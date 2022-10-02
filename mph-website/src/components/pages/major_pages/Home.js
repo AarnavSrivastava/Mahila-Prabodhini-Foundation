@@ -3,16 +3,20 @@ import ImgDisp from './home_components/ImgDisp';
 import HomeTextDisp from './home_components/HomeTextDisp';
 import TextDisp from './home_components/NumbersTextDisp';
 import ImgGridDisp from './home_components/ImgGridDisp';
+import DonateDisp from './home_components/DonateDisp';
+import Logos from './home_components/Logos';
 
 const Home = () => {
     return (
-        <div>
-            <div className="flex flex-col items-center py-[5vw] gap-[5vw]">
+        <div className="flex flex-col items-center">
+            <div className="flex flex-col items-center gap-[5vw]">
                 <ImgDisp />
                 <HomeTextDisp />
                 <TextDisp />
                 <ImgGridDisp />
             </div>
+            <Logos />
+            <DonateDisp />
         </div>
     )
 }
