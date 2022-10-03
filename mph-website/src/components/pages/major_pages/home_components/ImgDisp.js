@@ -5,7 +5,7 @@ import {Link} from "react-router-dom"
 const ImgDisp = () =>
 {
     return (
-        <div className="px-[15vw] pt-[5vw] flex flex-row gap-[15vw] justify-start items-center rounded-xl">
+        <div className="w-[100%] px-[15vw] pt-[5vw] flex flex-row gap-[15vw] justify-start items-center rounded-xl">
             <div className="flex basis-1/2 flex-col justify-start">
                 <div className="font-poppins font-black lg:text-[4.3vw] text-[44px]">
                     Who We Are

@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 
 const HomeTextDisp = () => {
     return (
-        <div className="transform bg-[#FFF5F5] relative px-[10vw] flex flex-col justify-start items-center ">
+        <div className="w-[100%] transform bg-[#FFF5F5] relative px-[10vw] flex flex-col justify-start items-center ">
             <div className="py-[10%] px-[5vw] flex relative flex-col justify-start">
                 <div className="font-poppins font-black lg:text-[4.3vw] text-[44px] pt-[5%] pb-[2.5%]">
                     What We Do

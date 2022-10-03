@@ -22,13 +22,18 @@ module.exports = {
       // => @media (min-width: 1536px) { ... }
     },
     extend: {
+      backgroundImage: {
+        'ngopic-2': "url('/src/components/images/ngopic2.png')",
+        'contact-pic': "url('/src/components/images/contact_image.jpg')",
+      },
         colors: {
           'background-blue-transparent' : 'rgba(17, 31, 61, 0.9)',
           'background-blue' : 'rgba(40, 68, 120)',
           'defpink' : '#EA4C89',
           'white-transparent': 'rgba(255, 255, 255, 0.9)',
           'cream' : '#FFD3BA',
-          'sand' : '#EF8E78'
+          'sand' : '#EF8E78',
+          'black-transparent': 'rgba(0, 0, 0, 0.6)'
         },
       },
       fontFamily: {

@@ -6,7 +6,7 @@ import { Waypoint } from 'react-waypoint';
 const TextDisp = () => {
 
     return (
-        <div className="px-[15vw] py-[10%] flex flex-row gap-[10vw] justify-start items-center rounded-xl h-[100%]">
+        <div className="w-[100%] px-[15vw] py-[10%] flex flex-row gap-[10vw] justify-start items-center rounded-xl h-[100%]">
             <div className="flex basis-1/2 flex-col justify-start">
                 <div className="font-poppins font-black lg:text-[4.3vw] text-[44px]">
                     Our numbers that speak
