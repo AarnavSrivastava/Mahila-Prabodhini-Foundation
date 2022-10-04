@@ -14,7 +14,7 @@ import Donate from './components/pages/major_pages/Donate.js';
 
 function App() {
   return (
-    <div className="flex flex-col bg-white min-h-screen">
+    <div className="flex flex-col bg-white overflow-x-hidden">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>

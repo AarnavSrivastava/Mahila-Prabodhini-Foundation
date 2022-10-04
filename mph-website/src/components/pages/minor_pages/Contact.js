@@ -1,3 +1,4 @@
+import ContactForm from "./contact_components/ContactForm";
 import ImgBackground from "./contact_components/ImgBackground";
 
 const Contact = () => {
@@ -6,7 +7,7 @@ const Contact = () => {
             <div className="flex flex-col items-center gap-[5vw]">
                 <ImgBackground />
                 <div className="grow">
-                    aa
+                    <ContactForm />
                 </div>
             </div>
         </div>
