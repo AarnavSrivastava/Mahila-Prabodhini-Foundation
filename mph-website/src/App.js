@@ -11,10 +11,9 @@ import PrivacyPolicy from './components/pages/minor_pages/PrivacyPolicy.js';
 import {Route, Routes} from "react-router-dom";
 import Donate from './components/pages/major_pages/Donate.js';
 
-
 function App() {
   return (
-    <div className="flex flex-col bg-white overflow-x-hidden">
+    <div className="flex flex-col bg-white x-">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />}></Route>

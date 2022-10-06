@@ -1,6 +1,6 @@
 import { useSpring, animated, config } from 'react-spring'
 import { useState } from 'react';
-import { Waypoint } from 'react-waypoint';
+import VisibilitySensor from 'react-visibility-sensor';
 
 
 const TextDisp = () => {
@@ -63,8 +63,16 @@ const TextDisp = () => {
     );
 }
 
+
+
 function Number(props) {
+    
     const [inView, setAppear] = useState(false);
+
+    const handleAppear = () => {
+        if (inView === false)
+            setAppear(prev => !prev)
+    }
 
     const { number } = useSpring({
         reset: inView,
@@ -76,11 +84,13 @@ function Number(props) {
     })
 
     return (
-        <Waypoint onEnter={() => setAppear(true)} onLeave={() => setAppear(false)}>
-            <div className="flex flex-row ">
+    
+        <div className="flex flex-row ">
+            <VisibilitySensor onChange={() => handleAppear()}>
                 <animated.div>{number.to(n => n.toFixed(0))}</animated.div>
-            </div>
-        </Waypoint>
+            </VisibilitySensor>
+        </div>
+    
     )
 }
 

@@ -4,15 +4,17 @@ import {Link} from "react-router-dom";
 const BottomLinks = () =>
 {
     return (
-        <div className="hidden md:flex flex-col mt-auto font-lato">
+        <footer className="hidden md:flex flex-col mt-auto font-lato">
+            <div className="flex flex-col w-[100%] bg-sand justify-center items-center pt-[3vw] pb-[5vw] gap-[2vw]">
+            <div className="font-opensans font-black text-white lg:text-[1.3vw] text-[14px]">GIVE US A HAND</div>
+            <div className="font-opensans font-black text-white text-[1.8vw]">Join us in creating hope and opportunity for thousands of women</div>
+                <Link className="flex xl:text-[16px] font-opensans text-[1.2vw] tracking-widest font-bold lg:px-[2vw] lg:py-[1vw] px-[30px] py-[12px] justify-center items-center transition hover:-translate-y-1 hover:scale-100 text-[#831843] ease-in-out delay-[10ms] bg-white hover:text-orange-200 hover:bg-[#831843] duration-300" to="/donate">
+                    DONATE
+                </Link>
+            </div>
             <div className="flex flex-row flex-wrap justify-between items-center bg-background-blue gap-[5%] py-[4%] px-[8%]">
                 <ul className="basis-0 grow grid gap-[5vw]">
                     <div className="font-light font-lato xl:text-[24px] text-[1.8vw] text-white">Help us change the lives of people around the world</div>
-                    <div className="flex justify-start items-center">
-                        <Link className="flex font-poppins xl:text-[16px] text-[1.2vw] tracking-widest font-extrabold px-[1.8vw] py-[1vw] xl:px-[24px] xl:py-[12px] justify-center items-center transition hover:-translate-y-1 hover:scale-100 text-[#831843] ease-in-out delay-[10ms] bg-white hover:text-orange-200 hover:bg-[#831843] duration-300" to="/donate">
-                            DONATE NOW
-                        </Link>
-                    </div>
                 </ul>
 
                 <ul className="basis-0 grow flex flex-col items-center flex-wrap gap-[0.1vw]">
@@ -26,7 +28,7 @@ const BottomLinks = () =>
             </div>
 
             <div className="flex justify-center bg-[#0F1C35]  text-white text-[0.7vw]">© Copyright 2022 | dummywebsite.com | All right reserved.</div>
-        </div>
+        </footer>
     );
 }
 
