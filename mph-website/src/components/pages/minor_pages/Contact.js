@@ -1,6 +1,5 @@
 import ContactForm from "./contact_components/ContactForm";
 import ImgBackground from "./contact_components/ImgBackground";
-import MapDisp from "./contact_components/MapDisp";
 
 const Contact = () => {
     return (
@@ -9,7 +8,6 @@ const Contact = () => {
                 <ImgBackground />
                 <ContactForm />
             </div>
-            <MapDisp />
         </div>
     )
 }

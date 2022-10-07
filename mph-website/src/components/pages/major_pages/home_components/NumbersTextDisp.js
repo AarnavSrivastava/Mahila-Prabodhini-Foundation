@@ -1,9 +1,11 @@
 import { useSpring, animated, config } from 'react-spring'
-import { useState } from 'react';
-import { Waypoint } from 'react-waypoint';
+import { useState, useEffect, useRef } from 'react';
+
 
 
 const TextDisp = () => {
+    const ref = useRef();
+    const inView = useOnScreen(ref);
 
     return (
         <div className="w-[100%] px-[15vw] py-[10%] flex flex-row gap-[10vw] justify-start items-center rounded-xl h-[100%]">
@@ -20,7 +22,7 @@ const TextDisp = () => {
                     <div className="flex flex-col grow items-center">
                         <div className='flex flex-row'>
                             $
-                            <Number number={200} />
+                            <Number number={200} inView={inView} />
                             +
                         </div>
                         <div className="text-slate-600 lg:text-[1.3vw] text-[14px]">Funds Raised</div>
@@ -29,7 +31,7 @@ const TextDisp = () => {
 
                     <div className="flex flex-col grow items-center">
                         <div className='flex flex-row'>
-                            <Number number={4000} />
+                            <Number number={4000} inView={inView} />
                             +
                         </div>
                         <div className="text-slate-600 lg:text-[1.3vw] text-[14px]">Happy Donators</div>
@@ -37,11 +39,12 @@ const TextDisp = () => {
                     </div>
                     
                 </div>
-                <div className="bg-sand lg:w-[30vw] w-[300px] grow h-[1px]"></div>
+                <div className="bg-sand lg:w-[30vw] w-[300px] grow h-[1px]" ref={ref}></div>
+                
                 <div className="flex flex-row gap-x-[3vw]">
                     <div className="flex flex-col grow items-center">
                         <div className='flex flex-row'>
-                            <Number number={95} />
+                            <Number number={95} inView={inView} />
                             K+
                         </div>
                         <div className="text-slate-600 lg:text-[1.3vw] text-[14px]">Members Worldwide</div>
@@ -50,7 +53,7 @@ const TextDisp = () => {
 
                     <div className="flex flex-col grow items-center">
                         <div className='flex flex-row'>
-                            <Number number={100} />
+                            <Number number={100} inView={inView} />
                             +
                         </div>
                         <div className="text-slate-600 lg:text-[1.3vw] text-[14px]">People Helped</div>
@@ -63,30 +66,39 @@ const TextDisp = () => {
     );
 }
 
+function useOnScreen(ref) {
+    const [isIntersecting, setIntersecting] = useState(false)
+  
+    
+  
+    useEffect(() => {
+        const observer = new IntersectionObserver(
+            ([entry]) => setIntersecting(entry.isIntersecting)
+        )
+        observer.observe(ref.current)
+        // Remove the observer as soon as the component is unmounted
+        return () => { observer.disconnect() }
+    }, [ref])
 
+    return isIntersecting
+}
 
 function Number(props) {
-    
-    const [inView, setAppear] = useState(false);
-
-    {inView && console.log(inView)}
-    {!inView && console.log(inView)}
+    console.log(props.inView)
 
     const { number } = useSpring({
-        reset: inView,
+        reset: false,
         reverse: false,
         from: { number: 0 },
-        number: inView ? props.number : 0,
-        delay: 100,
+        number: props.inView ? props.number : 0,
+        delay: 300,
         config: config.molasses,
     })
 
     return (
     
         <div className="flex flex-row ">
-            <Waypoint onEnter={() => setAppear(true)} onLeave={() => setAppear(false)}>
-                <animated.div>{number.to(n => n.toFixed(0))}</animated.div>
-            </Waypoint>
+            <animated.div>{(props.inView) ? number.to(n => n.toFixed(0)) : props.number}</animated.div>
         </div>
     
     )

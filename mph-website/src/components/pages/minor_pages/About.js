@@ -1,6 +1,6 @@
 import React from 'react';
-import TxtDisp from './minor_page_components/AboutUsTxt.js'
-import ImgGridDisp from './minor_page_components/ImgGridDisp.js';
+import TxtDisp from './about_components/AboutUsTxt.js'
+import ImgGridDisp from './about_components/ImgGridDisp.js';
 
 const About = () => {
     return (
