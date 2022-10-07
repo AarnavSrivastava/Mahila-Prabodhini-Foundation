@@ -1,25 +1,25 @@
 const TxtDisp = () =>
 {
     return (
-        <div>
-            <div className="font-lato lg:text-[1.6vw] text-[16px] px-[11%] pb-[2%] lg:leading-[2.5vw] leading-1">
-                We focus on the most potent and significant parts of society i.e., Women. They possess by birth
-                managerial risk-bearing capability and of course patience. We graduate them into thrift and
-                credit groups (women's self-help groups). Each group consists of 10-15 rural women from the
-                same socio-economic background. They mobilize thrift and deposit in saving account- Group
-                saving account. Initially, they solved their emergent need from their own mobilized capital.
-                Later they move towards micro income generation activities for which they need capacity
-                building entrepreneurship development program. After taking Entrepreneurship training, they
-                set up a tiny production unit but they still have to face marketing problems. We, therefore,
-                started the concept of Prabodhini Gram Bazaar (Rural Mart).
+        <div className="px-[5vw] flex relative flex-col justify-start">
+            <div className="font-poppins font-black lg:text-[4.3vw] text-[44px] pt-[5%] pb-[2.5%]">
+                Who We Are
             </div>
-            <div className="font-lato lg:text-[1.6vw] text-[16px] px-[11%] pb-[4%] lg:leading-[2.5vw] leading-1">
-                It is a service-providing center, where rural entrepreneurs supply products like handmade
-                potteries, tufted decorative items, bamboo handicrafts, and bedsheets made up of the best of
-                wastes, jute folders, file covers, bags, batuas, computer bags, sling bags, etc., and also the food
-                preservative items like Jams, Jellies, Squashes, kinds of ketchup, Pickles, Badis, Mungodis,
-                Chips, Papads, and many more food items as well as handmade items. In return, they receive
-                ideas and technology as per marketing demands.
+            <div className="bg-magenta grow h-[1px]" />
+
+            <div className="grid grid-cols-2 gap-[6vw] justify-center">
+                <div className="pt-[2.5%] pb-[5%] font-poppins font-black lg:text-[1.4vw] text-[15px] leading-[4.5vw] text-magenta">
+                    We are a team of change-makers who believe that every helping hand can help a person and create a better future for them
+                </div>
+
+                <div className="flex flex-col">
+                    <div className="pt-[2.5%] pb-[5%] font-lato lg:text-[1.3vw] text-[14px] leading-[4.5vw] text-gray-500">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis fermentum nisi, eget tincidunt justo euismod ac. Sed faucibus risus justo, a finibus tortor condimentum non. Praesent vel nisl placerat, tincidunt odio in, viverra risus. Duis maximus blandit ultrices.
+                    </div>
+                    <div className="pt-[2.5%] pb-[5%] font-lato lg:text-[1.3vw] text-[14px] leading-[4.5vw] text-gray-500">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis fermentum nisi, eget tincidunt justo euismod ac. Sed faucibus risus justo, a finibus tortor condimentum non. Praesent vel nisl placerat, tincidunt odio in, viverra risus. Duis maximus blandit ultrices.
+                    </div>
+                </div>
             </div>
         </div>
     )

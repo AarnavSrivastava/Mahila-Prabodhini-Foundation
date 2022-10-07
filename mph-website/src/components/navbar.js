@@ -7,7 +7,7 @@ const Navbar = () =>
 {
 
     return (
-        <nav className="flex wrap flex-row sticky top-0 z-50 justify-between items-center bg-background-blue-transparent px-[6%] min-h-[60px]">
+        <nav className="flex wrap flex-row fixed top-0 z-50 justify-between items-center bg-background-blue-transparent px-[6%] w-screen min-h-[60px] ">
             <Link to="/">
                 <HomeLink />
             </Link>
@@ -22,7 +22,7 @@ const Navbar = () =>
                 </ul>
 
                 <li>
-                    <Link className="flex xl:text-[16px] font-opensans text-[1.2vw] tracking-widest font-bold px-[1.8vw] py-[1vw] xl:px-[24px] xl:py-[12px] justify-center items-center transition hover:-translate-y-1 hover:scale-100 text-[#831843] ease-in-out delay-[10ms] bg-white hover:text-orange-200 hover:bg-[#831843] duration-300" to="/donate">
+                    <Link className="flex xl:text-[16px] font-opensans text-[1.2vw] tracking-widest font-bold px-[1.8vw] py-[1vw] xl:px-[24px] xl:py-[12px] justify-center items-center transition hover:-translate-y-1 hover:scale-100 text-magenta ease-in-out delay-[10ms] bg-white hover:text-orange-200 hover:bg-magenta duration-300" to="/donate">
                         DONATE
                     </Link>
                 </li>

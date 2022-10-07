@@ -17,7 +17,7 @@ const ImgDisp = () =>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis fermentum nisi, eget tincidunt justo euismod ac. Sed faucibus risus justo, a finibus tortor condimentum non. Praesent vel nisl placerat, tincidunt odio in, viverra risus. Duis maximus blandit ultrices.
                 </div>
                 <div>
-                    <Link to="/aboutus" className="lg:text-[1vw] text-[10px] tracking-widest font-opensans font-bold px-[1.8vw] py-[1.2vw] xl:px-[24px] xl:py-[12px] transition hover:-translate-y-1 hover:scale-100 ease-in-out delay-[10ms] bg-cream hover:text-orange-200 hover:bg-[#831843] duration-300">
+                    <Link to="/aboutus" className="lg:text-[1vw] text-[10px] tracking-widest font-opensans font-bold px-[1.8vw] py-[1.2vw] xl:px-[24px] xl:py-[12px] transition hover:-translate-y-1 hover:scale-100 ease-in-out delay-[10ms] bg-cream hover:text-orange-200 hover:bg-magenta duration-300">
                         READ MORE
                     </Link>
                 </div>

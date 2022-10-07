@@ -25,6 +25,7 @@ module.exports = {
       backgroundImage: {
         'ngopic-2': "url('/src/components/images/ngopic2.png')",
         'contact-pic': "url('/src/components/images/contact_image.jpg')",
+        'ngopic-4': "url('/src/components/images/ngopic4.png')",
       },
         colors: {
           'background-blue-transparent' : 'rgba(17, 31, 61, 0.9)',
@@ -33,7 +34,8 @@ module.exports = {
           'white-transparent': 'rgba(255, 255, 255, 0.9)',
           'cream' : '#FFD3BA',
           'sand' : '#EF8E78',
-          'black-transparent': 'rgba(0, 0, 0, 0.6)'
+          'black-transparent': 'rgba(0, 0, 0, 0.6)',
+          'magenta' : '#831843',
         },
       },
       fontFamily: {

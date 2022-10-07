@@ -12,7 +12,7 @@ const HomeTextDisp = () => {
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis fermentum nisi, eget tincidunt justo euismod ac. Sed faucibus risus justo, a finibus tortor condimentum non. Praesent vel nisl placerat, tincidunt odio in, viverra risus. Duis maximus blandit ultrices. Sed dapibus lacus vitae nunc condimentum vehicula. Donec at risus cursus lectus condimentum facilisis. Fusce nec lacus ut est placerat elementum.
                 </div>
                 <div>
-                    <Link to="/aboutus" className="lg:text-[1vw] font-opensans font-bold text-[0.6em] leading-[4.5vw] tracking-widest px-[1.8vw] py-[1.2vw] xl:px-[24px] xl:py-[12px] transition hover:-translate-y-1 hover:scale-100 ease-in-out delay-[10ms] bg-cream hover:text-orange-200 hover:bg-[#831843] duration-300">
+                    <Link to="/aboutus" className="lg:text-[1vw] font-opensans font-bold text-[0.6em] leading-[4.5vw] tracking-widest px-[1.8vw] py-[1.2vw] xl:px-[24px] xl:py-[12px] transition hover:-translate-y-1 hover:scale-100 ease-in-out delay-[10ms] bg-cream hover:text-orange-200 hover:bg-magenta duration-300">
                         READ MORE
                     </Link>
                 </div>
@@ -43,7 +43,7 @@ const HomeTextDisp = () => {
                     <div className="bg-white mt-[2vw] mb-[5vw] w-[4vw] h-[0.6vw]" />
                 </div>
 
-                <div className="flex flex-col px-[2vw] py-[2vw] bg-[#831843]">
+                <div className="flex flex-col px-[2vw] py-[2vw] bg-magenta">
                     Service Entrepreneur
                     <div className="py-[4vw] font-lato font-light text-white md:text-[1.3vw] text-[10px]">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec facilisis fermentum nisi, eget tincidunt justo euismod ac.

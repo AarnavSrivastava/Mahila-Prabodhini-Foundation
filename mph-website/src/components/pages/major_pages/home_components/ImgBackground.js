@@ -10,7 +10,7 @@ const ImgBackground = () => {
                 <div className="bg-black-transparent font-poppins font-black text-white lg:text-[3.5vw] text-[30px] p-[1vw]">
                     Part of being a person is about helping others.
                 </div>
-                <Link className="flex flex-wrap w-[25%] mt-[2vw] font-poppins lg:text-[1.2vw] text-[12px] tracking-widest font-extrabold px-[1.8vw] py-[1vw] justify-center items-center transition hover:-translate-y-1 hover:scale-100 text-[#831843] ease-in-out delay-[10ms] bg-white hover:text-orange-200 hover:bg-[#831843] duration-300" to="/donate">
+                <Link className="flex flex-wrap w-[25%] mt-[2vw] font-poppins lg:text-[1.2vw] text-[12px] tracking-widest font-extrabold px-[1.8vw] py-[1vw] justify-center items-center transition hover:-translate-y-1 hover:scale-100 text-magenta ease-in-out delay-[10ms] bg-white hover:text-orange-200 hover:bg-magenta duration-300" to="/donate">
                     DONATE NOW
                 </Link>
             </div>

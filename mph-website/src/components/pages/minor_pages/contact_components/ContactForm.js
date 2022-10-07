@@ -114,7 +114,7 @@ const ContactForm = () => {
                     {badge3 === "border-rose-500" && <p className="text-red-500 text-xs italic">Please enter an email address</p>}
                     <textarea onChange={e => setMessage(e.target.value)} type="text" name="message" placeholder="Message" className={"w-[100%] border p-[1vw] " + badge4} rows="10"/>
                     {badge4 === "border-rose-500" && <p className="text-red-500 text-xs italic">Please enter a message</p>}
-                    <button type="submit" className="border xl:text-[16px] font-opensans text-[1.2vw] tracking-widest font-bold px-[1.8vw] py-[1vw] xl:px-[24px] xl:py-[12px] justify-center items-center transition hover:-translate-y-1 hover:scale-100 text-[#831843] ease-in-out delay-[10ms] bg-white hover:text-orange-200 hover:bg-[#831843] duration-300">
+                    <button type="submit" className="border xl:text-[16px] font-opensans text-[1.2vw] tracking-widest font-bold px-[1.8vw] py-[1vw] xl:px-[24px] xl:py-[12px] justify-center items-center transition hover:-translate-y-1 hover:scale-100 text-magenta ease-in-out delay-[10ms] bg-white hover:text-orange-200 hover:bg-magenta duration-300">
                         SUBMIT
                     </button>
                 </form>

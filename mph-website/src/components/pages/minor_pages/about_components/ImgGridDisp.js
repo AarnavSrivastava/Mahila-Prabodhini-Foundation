@@ -10,7 +10,7 @@ import ngopic7 from '../../../images/ngopic7.png'
 const ImgGridDisp = () =>
 {
     return (
-        <div className="grid grid-cols-4 gap-x-[1.5%] gap-y-[2.5%] px-[1.5%] pb-[10%]">
+        <div className="grid grid-cols-4 gap-x-[1.5%] gap-y-[2.5%] px-[10vw] pb-[10%]">
             <img className="col-span-2 w-[100%] h-[100%]" src={ngopic2} id="vendor" alt="Vendors 1"/>
             <img className="w-[100%] h-[100%]" src={ngopic1} id="vendor" alt="Vendors 2"/>
             <img className="w-[100%] h-[100%]" src={ngopic5} id="vendor" alt="Vendors 3"/>
