@@ -84,8 +84,6 @@ function useOnScreen(ref) {
 }
 
 function Number(props) {
-    console.log(props.inView)
-
     const { number } = useSpring({
         reset: false,
         reverse: false,
