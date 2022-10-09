@@ -37,7 +37,7 @@ function CustomLink({ to, children })
     const resolvedPath = useResolvedPath(to)
     const isActive = useMatch({ path: resolvedPath.pathname, end: true})
     return (
-        <li className="flex font-medium text-[16px] xl:text-[20px] text-[1.6vw]">
+        <li className="flex font-medium text-[16px] xl:text-[20px] lg:text-[1.6vw]">
             <Link to={to} className={"transition text-white ease-in-out hover:-translate-y-1 hover:scale-100 duration-[125ms] hover:text-orange-300 hover:font-medium " + (isActive ? "text-orange-200" : "") + " duration-125"}>{children}</Link>
         </li>
     )
