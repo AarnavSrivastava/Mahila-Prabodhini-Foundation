@@ -9,12 +9,12 @@ import './Popup.css'
 const ContactForm = () => {
     const form = useRef();
 
-    const [successful, setSuccessful] = useState(true);
+    const [successful, setSuccessful] = useState(null);
 
-    const [badge1, setBadge1] = useState("border-slate-200");
-    const [badge2, setBadge2] = useState("border-slate-200");
-    const [badge3, setBadge3] = useState("border-slate-200");
-    const [badge4, setBadge4] = useState("border-slate-200");
+    const [badge1, setBadge1] = useState("border-slate-200 transition ease-in-out focus:bg-slate-100");
+    const [badge2, setBadge2] = useState("border-slate-200 transition ease-in-out focus:bg-slate-100");
+    const [badge3, setBadge3] = useState("border-slate-200 transition ease-in-out focus:bg-slate-100");
+    const [badge4, setBadge4] = useState("border-slate-200 transition ease-in-out focus:bg-slate-100");
 
     const [first_name, setFirstName] = useState("");
     const [last_name, setLastName] = useState("");
@@ -29,6 +29,7 @@ const ContactForm = () => {
         if (first_name === "")
         {
             setBadge1("border-rose-500")
+            setSuccessful(null);
         }
         else
         {
@@ -38,6 +39,7 @@ const ContactForm = () => {
         if (last_name === "")
         {
             setBadge2("border-rose-500")
+            setSuccessful(null);
         }
         else
         {
@@ -47,6 +49,7 @@ const ContactForm = () => {
         if (!validEmail.test(email))
         {
             setBadge3("border-rose-500")
+            setSuccessful(null);
         }
         else
         {
@@ -56,6 +59,7 @@ const ContactForm = () => {
         if (message === "")
         {
             setBadge4("border-rose-500")
+            setSuccessful(null);
         }
         else
         {
@@ -66,9 +70,9 @@ const ContactForm = () => {
         {
             emailjs.sendForm(process.env.REACT_APP_SERVICE_ID, process.env.REACT_APP_TEMPLATE_ID, form.current, process.env.REACT_APP_PUBLIC_KEY)
             .then((result) => {
-                console.log(result.text);
+                setSuccessful(true);
             }, (error) => {
-                console.log(error.text);
+                setSuccessful(false);
             });
 
             e.target.reset();
@@ -107,21 +111,29 @@ const ContactForm = () => {
 
             <div className="basis-0 grow flex flex-col">
                 <div className="font-poppins font-black lg:text-[3vw] text-[30px] mb-[2vw]">Message Us</div>
-                <form ref={form} id="contact_form" onSubmit={sendEmail} className="flex flex-col items-start font-opensans font-light gap-[2vh] lg:text-[1.5vw] text-[16px]">
-                    <div className="grow grid grid-cols-2 gap-[2vw]">
+                <form ref={form} id="contact_form" onSubmit={sendEmail} className="flex flex-col relative items-start font-opensans font-light gap-[2vh] lg:text-[1.5vw] text-[16px]">
+                    <div className="relative grow grid grid-cols-2 gap-[2vw]">
                         <input onChange={e => setFirstName(e.target.value)} type="text" name="first_name" placeholder="First Name" className={"border p-[1vw] " + badge1}/>
                         <input onChange={e => setLastName(e.target.value)} type="text" name="last_name" placeholder="Last Name" className={"border p-[1vw] " + badge2}/>
-                        {badge1 === "border-rose-500" && <p className="text-red-500 text-xs italic">Please enter a first name</p>}
-                        {badge2 === "border-rose-500" && <p className="text-red-500 text-xs italic">Please enter a last name</p>}
+                        {badge1 === "border-rose-500" && <p className="px-[0.4vw] absolute -translate-x-[0.1vw] -translate-y-[0.6vw] text-red-500 bg-white text-[0.8vw] italic">Please enter a first name</p>}
+                        {badge2 === "border-rose-500" && <p className="px-[0.4vw] absolute translate-x-[18.9vw] -translate-y-[0.6vw] text-red-500 bg-white text-[0.8vw] italic">Please enter a last name</p>}
                     </div>
-                    <input onChange={e => setEmail(e.target.value)} type="email" name="reply_to" placeholder="Email" className={"w-[100%] border p-[1vw] " + badge3}/>
-                    {badge3 === "border-rose-500" && <p className="text-red-500 text-xs italic">Please enter an email address</p>}
-                    <textarea onChange={e => setMessage(e.target.value)} type="text" name="message" placeholder="Message" className={"w-[100%] border p-[1vw] " + badge4} rows="10"/>
-                    {badge4 === "border-rose-500" && <p className="text-red-500 text-xs italic">Please enter a message</p>}
+                    <div className="relative w-[100%]">      
+                        <input onChange={e => setEmail(e.target.value)} type="email" name="reply_to" placeholder="Email" className={"w-[100%] border p-[1vw] " + badge3}/>
+                        {badge3 === "border-rose-500" && <p className="px-[0.4vw] text-red-500 absolute -translate-x-[0.1vw] -translate-y-[5vw] bg-white text-[0.8vw] italic">Please enter an email address</p>}
+                    </div>
+                    <div className="relative w-[100%]">
+                        <textarea onChange={e => setMessage(e.target.value)} type="text" name="message" placeholder="Message" className={"w-[100%] border p-[1vw] " + badge4} rows="10"/>
+                        {badge4 === "border-rose-500" && <p className="px-[0.4vw] absolute -translate-x-[0.1vw] -translate-y-[25.8vw] text-red-500 bg-white text-[0.8vw] italic">Please enter a message</p>}
+                    </div>
+                    
                     <Popup position="right bottom" closeOnDocumentClick className="flex flex-col" trigger={<button type="submit" className="border xl:text-[16px] font-opensans text-[1.2vw] tracking-widest font-bold px-[1.8vw] py-[1vw] xl:px-[24px] xl:py-[12px] justify-center items-center transition hover:-translate-y-1 hover:scale-100 text-magenta ease-in-out delay-[10ms] bg-white hover:text-orange-200 hover:bg-magenta duration-300">SUBMIT</button>}>
-                        <div className="flex flex-row justify-center items-center gap-[1vw] border-2 rounded-md p-[1vw] ">
-                            {(successful) ? "Email Sent!" : "Email Not Sent - try again later"}
-                        </div>
+                        {(successful) && <div className="flex flex-row justify-center items-center gap-[1vw] border-2 border-black text-black text-[1vw] rounded-md p-[1vw] ">
+                            Email Sent!
+                        </div>}
+                        {(!successful) && <div className="flex flex-row justify-center items-center gap-[1vw] border-2 border-red-600 text-red-600 text-[1vw] rounded-md p-[1vw] ">
+                            An error occurred in sending the email - try again later
+                        </div>}
                     </Popup>
                 </form>
             </div>
